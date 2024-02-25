@@ -7,6 +7,7 @@ import Container from "@/components/Container";
 import Filter from "./_components/Filter";
 import NoResults from "@/components/NoResults";
 import ProductCard from "@/components/ProductCard";
+import MobileFilter from "./_components/MobileFilter";
 
 export const revalidate = 0;
 
@@ -40,7 +41,7 @@ const CategoryIdPage = async ({
         <Billboard data={category.billboard}></Billboard>
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-            {/* Add mobile filter */}
+            <MobileFilter sizes={sizes} colors={colors}></MobileFilter>
             <div className="hidden lg:block">
               <Filter valueKey="sizeId" name="Sizes" data={sizes}></Filter>
               <Filter valueKey="colorId" name="Colors" data={colors}></Filter>
