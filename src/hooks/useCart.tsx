@@ -16,7 +16,7 @@ const useCart = create(
       addItem: (data: Product) => {
         const currentProducts = get().products;
         const existingProduct = currentProducts.find(
-          product => product.id === product.id
+          product => product.id === data.id
         );
 
         if (existingProduct) {
